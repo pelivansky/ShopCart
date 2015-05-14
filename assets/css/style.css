@@ -1,0 +1,194 @@
+body{
+    font-family: "Lobster";
+    font-size: 12px;
+}
+ 
+#content{
+    width: 1020px;
+    margin: 0 auto;
+}
+.products_list{
+    width:1020px;
+    margin:0;
+    padding:0;
+    overflow: auto;
+}
+.products{
+    list-style-type: none;
+    width: 1020px;
+    margin: 0;
+    padding: 0;
+}
+.products li{
+    background: #ddCFCB;
+    border: 1px solid black;
+    padding: 5px;
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    font-family: "Merriweather";
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+ .products h3{
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    font-size: 14px;
+ }
+.products img{
+    margin: 0px;
+    padding: 0px;
+    width:100%;
+    height:100px;
+}
+.products small{
+    display: block;
+}
+.products form fieldset{
+    border: 0px;
+}
+.products form label{
+    font-size: 12px;
+}
+.products form input[type=text]{
+    width: 18px;
+    background: #FFF;
+    border: 1px solid #d3d3d3;
+    border-radius:3px;
+}
+.cart_list{
+    width:633px;
+    background-color: #eeeeee;
+    border: 1px solid #aca;
+    float:left;
+}
+.cart_list h3{
+    margin:0px;
+    padding:10px 0 10px 35px;
+    background-color: #ddeeee;
+    font-size: 21px;
+}
+.cart_content{
+    margin: 0px;
+    padding:0px;
+}
+.cart_table td{
+    font-size:16px;
+}
+.small{
+    background-color: #ddCFCB;
+    font-size: 14px;
+    margin:0px;
+    padding:14px;
+}
+.thead{
+    background-color: #aaeeee;
+    font-size: 17px;
+}
+.ttotal{
+    background-color: #aaeeee;  
+}
+/* buuton*/
+
+.fg-button{
+    position: relative;
+    top: 0;
+    border-radius: 4;
+    font-size: 18px;
+    margin:0px 10px;
+    padding: 8px 15px;
+    text-decoration: none;
+    border: 0px solid;
+    cursor: pointer;
+    border-bottom-width: 3px;
+    outline: none;
+    transition: 0.3s background;
+}
+.fg-button:active{
+    top: 2px;
+}
+.fg-button.teal{
+    color: #fff;
+    border-color: #04A5A1;
+    background-color:#08BBB7;
+}
+.fg-button.teal:hover{
+    background: #0ACFCB;
+}
+.fg-button.teal:active{
+    background: #09cbc7;
+    top: 2px;
+    border-bottom-width: 1px;
+}
+
+#bill{
+    width:300px;
+    margin-left:10px;
+    padding: 0;
+    background-color: #eeeeee;
+    border: 1px solid #aca;
+    float:left;
+}
+#bill h1{
+    margin:0px;
+    padding:10px 0 10px 35px;    
+    background-color: #ddeeee;
+    font-size: 21px;   
+}
+#response{
+    width:300px;
+    margin-left:10px;
+    padding: 0;
+    background-color: #eeeeee;
+    border: 1px solid #aca;
+    float:left;  
+}
+#response h1{
+    margin:0px;
+    padding:10px 0 10px 35px;    
+    background-color: #ddeeee;
+    font-size: 21px;   
+}
+#response p{
+    margin:0;
+    padding: 3px 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 33px;
+    font-family: "Lobster";
+    background-color:#ddCFCB;
+    color:#00FF00;
+}
+
+#response h2{
+    margin-left: 10px;
+}
+
+/* add buttons*/
+.add-button{
+    position: relative;
+    top: 0;
+    border-radius: 4;
+    font-family: 'Lobster';
+    font-size: 10px;
+    padding: 4px 10px;
+    margin-left: 5px;
+    text-decoration: none;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s background;
+}
+.add-button:active{
+    top: 2px;
+}
+.add-button.grey{
+    color: black;
+    background-color:#ddCFCB;
+}
+.add-button.grey:hover{
+    background: #aaeeee;
+}
+.add-button.grey:active{
+    background: #09cbc7;
