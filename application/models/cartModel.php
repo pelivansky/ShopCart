@@ -40,6 +40,15 @@ class CartModel extends CI_Model {
 	}
 
 	function add_cust($data){
+		$data = array(
+			'name' 	  => $this->input->post('name'),
+			'address' => $this->input->post('address'),
+			'email'   => $this->input->post('email'),
+			'phone'   => $this->input->post('phone'),
+			'amount'  => $this->cart->total(),
+			'date'    => $this->input->post('date'),
+			'time'    => $this->input->post('time')
+		);		
 		$this->db->insert('customer',$data);
 		return TRUE;
 	}	

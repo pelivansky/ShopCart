@@ -34,20 +34,16 @@ else:
 </table>
  
 <p>
-    <?php echo form_submit('', 'Update za Cart','class="fg-button teal"');
+    <?php 
+        echo form_submit('', 'Update za Cart','class="fg-button teal"');
         echo "&nbsp&nbsp&nbsp"; 
         echo anchor('shopCart/empty_cart', 'Empty za Cart','class="fg-button teal"');
         echo "&nbsp&nbsp&nbsp"; 
-        $atributes = array(
-            'class'     => 'fg-button teal'
-            );
-        echo anchor('ShopCart/checkout', 'Place za Order', $atributes);
-    ?>
+        echo '<a id="order" class="fg-button teal">Place za Order</a>';
+        echo form_close(); 
+        endif;
+        ?>
 </p>
 <p class="small">
     <small>If the quantity is set to zero, the item will be removed from the cart.</small>
 </p>
-<?php 
-echo form_close(); 
-endif;
-?>

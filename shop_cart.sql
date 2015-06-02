@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2015 at 10:26 AM
+-- Generation Time: Jun 02, 2015 at 09:14 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -29,36 +29,22 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `customer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  `adress` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `amount` int(255) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id`, `name`, `adress`, `email`, `phone`, `amount`) VALUES
-(1, 'fifi lepen', '0', 'fifi@fifi.com', '123123312111', 0),
-(2, 'bascula', '0', 'bascul@basc.com', '123456789009', 129),
-(3, 'vin diesel', '11424 n class,oho', 'vin@vin.com', '122255312111', 129),
-(4, 'chiorel', '8899 s west st,chi', 'cucuriku@cuuc.com', '76576576544', 38),
-(5, 'cucucurul', '1199 s west st,chi', 'faludgrshi@gaga.com', '1223135333', 126),
-(6, 'danana', '1111 fv ', 'ariel21@yahoo.com', '0723333221', 50),
-(7, 'bascula', '1111 fv', 'demail@daaa.com', '123123312111', 50),
-(8, 'bascula', '1111 fv', 'demail@daaa.com', '123123312111', 0),
-(9, 'bascula', '1111 fv', 'demail@daaa.com', '123123312111', 0),
-(10, 'bascula', '1111 fv', 'demail@daaa.com', '123123312111', 0),
-(11, 'dferwq', '1111 dfbhv', 'faludgrshi@gaga.com', '02110455476', 134),
-(12, 'basculappdd', '11424 n class,ontario', 'dsfsfsdf@sdfaf.rf', '02110455476', 60),
-(13, '3erqwwe', '5 n clark,duejs', 'emailul@email.ro', '112431345325', 67),
-(14, '3erqwwe', '5 n clark,duejs', 'emailul@email.ro', '112431345325', 8),
-(15, 'editator44', '5 n clark,duejs', 'falushi@gaga.com', '12312777777', 52),
-(16, 'beleee', '11424 n class,oho', 'julama@jula.com', '77312312343', 106),
-(17, 'fifilepene', '5 n clark,duejs', 'fdsfgdfb@sdafsf.com', '343466275434', 87),
-(18, 'jancacat', '11424 n class,ontario', 'awefrrce@ergcr.com', '123126612111', 49);
+INSERT INTO `customer` (`id`, `name`, `address`, `email`, `phone`, `amount`, `date`, `time`) VALUES
+(1, 'gigi', '123 n main', 'gigi@gigi.com', '123456789', 32, '2015-06-02', '20:53:51'),
+(3, 'cici', '112 splai', 'email@email.ro', '1773525548', 32, '2015-06-02', '21:12:05');
 
 -- --------------------------------------------------------
 

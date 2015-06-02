@@ -3,10 +3,12 @@
 class ShopCart extends CI_Controller {
 
 	function ShopCart(){
-		 parent:: __construct();
-		 $this->load->model('cartModel');
-		 $this->load->library('cart');
-		 $this->load->library('javascript');
+		parent:: __construct();
+		$this->load->model('cartModel');
+		$this->load->library('cart');
+		$this->load->library('javascript');
+        $this->load->library('form_validation');
+        $this->load->library('table');
 	}
 
 	function index(){
@@ -60,16 +62,20 @@ class ShopCart extends CI_Controller {
 	}
 
 	function add_cust(){
-		$data = array(
-			'name' 	 => $this->input->post('name'),
-			'adress' => $this->input->post('address'),
-			'email'  => $this->input->post('email'),
-			'phone'  => $this->input->post('phone'),
-			'amount' => $this->cart->total()
-		);
-		if($this->cartModel->add_cust($data) == TRUE){
-			$this->cart->destroy();
-			redirect('ShopCart/response');
+		$this->form_validation->set_rules('name','Name','trim|xss_clean|required');
+		$this->form_validation->set_rules('address','Address','trim|xss_clean|required');
+		$this->form_validation->set_rules('phone','Phone','trim|xss_clean|numeric|required');
+		$this->form_validation->set_rules('email','Email','trim|xss_clean|valid_email');
+
+		if($this->form_validation->run() == FALSE){
+			redirect('shopCart');
+		}else{
+			$data = $this->input->post();
+			if(isset($data) && !empty($data)){
+				$this->cartModel->add_cust($data); 
+			}
 		}
-	}		
+		
+    }	
+		
 }
